@@ -2,177 +2,129 @@
 
 ## Project Overview
 
-The **Smart Temperature Monitoring and Automatic Cooling System** is an embedded systems project developed using the PIC16F877A microcontroller and Assembly Language. The system is designed to monitor surrounding temperature, provide real-time temperature readings, and automatically respond to excessive temperature conditions.
+The **Smart Temperature Monitoring and Automatic Cooling System** is an embedded systems project developed using the PIC16F877A microcontroller and Assembly Language. It monitors surrounding temperature, displays temperature readings on an LCD, and responds automatically when the temperature exceeds a predefined threshold.
 
-The project integrates a DHT11 temperature sensor, LCD display, LED indicators, buzzer, relay module, and DC cooling fan to create a temperature-dependent monitoring and control system.
+The system integrates a DHT11 temperature sensor, LCD display, LED indicators, buzzer, relay module, and DC cooling fan. When the measured temperature exceeds **35°C**, the system activates visual and audible alerts and operates the cooling fan according to the programmed control logic.
 
-When the measured temperature exceeds a predefined threshold of **35°C**, the system activates visual and audible alerts while controlling the cooling fan through a relay. This approach combines temperature sensing, real-time feedback, alert generation, and automatic cooling in a single embedded application.
-
-The project demonstrates the practical application of low-level microcontroller programming, peripheral interfacing, threshold-based decision-making, and automated control.
+This project demonstrates the practical implementation of microcontroller programming, sensor interfacing, threshold-based decision-making, and automatic control using embedded systems.
 
 ## Key Features
 
-- **Real-Time Temperature Monitoring:** Measures the surrounding temperature using the DHT11 sensor.
-- **LCD-Based Temperature Display:** Presents temperature readings on an LCD for easy monitoring.
-- **Intelligent Threshold Detection:** Compares the measured temperature against a predefined threshold of 35°C.
-- **Visual Alert System:** Uses LED indicators to signal high-temperature conditions.
-- **Audible Warning:** Activates a buzzer when the temperature exceeds the configured limit.
-- **Automatic Cooling Control:** Operates a DC fan through a relay according to the programmed temperature-control logic.
-- **Low-Level Embedded Programming:** Implements system functionality using Assembly Language on the PIC16F877A.
-- **Integrated Monitoring and Control:** Combines sensing, display, alerts, and cooling in one system.
+- **Temperature Monitoring:** Measures ambient temperature using a DHT11 sensor.
+- **LCD Display:** Displays temperature readings for real-time monitoring.
+- **Threshold Detection:** Identifies temperature conditions exceeding the configured 35°C threshold.
+- **Visual Alerts:** Uses LED indicators to indicate high-temperature conditions.
+- **Audible Alerts:** Activates a buzzer when the temperature exceeds the configured limit.
+- **Automatic Cooling:** Controls a DC fan through a relay based on the programmed logic.
+- **Assembly Language Programming:** Implements the control logic using the PIC16F877A microcontroller.
+- **Integrated System Design:** Combines sensing, display, alert generation, and cooling control.
 
-## System Architecture
+## Project Images
 
-The system follows a sensor-to-controller-to-output architecture.
+### 1. Temperature Monitoring System
 
-```text
-       DHT11 Temperature Sensor
-                  |
-                  v
-          PIC16F877A MCU
-                  |
-       +----------+----------+
-       |          |          |
-       v          v          v
-   LCD Display   LED       Buzzer
-                  |
-                  v
-             Relay Module
-                  |
-                  v
-             DC Cooling Fan
-```
+This image presents the temperature monitoring system and its overall circuit or project arrangement.
 
-The PIC16F877A processes the temperature information and coordinates the display, warning indicators, and cooling mechanism according to the programmed control conditions.
+![Temperature Monitoring System](images/Temperature%20monitoring%20System.jpg)
+
+### 2. Hardware Implementation
+
+This image shows the hardware setup of the temperature monitoring system, including the interfaced components used in the project.
+
+![Temperature Monitoring System Hardware](images/Temperature%20Monitoring%20System%20Hardware.jpg)
+
+### 3. System Output
+
+This image demonstrates the system output, showing the monitoring or alert response during operation.
+
+![Temperature Monitoring System Output](images/Output%20of%20System.jpg)
 
 ## Hardware Components
 
-| Sr. No. | Component | Purpose |
-|---|---|---|
-| 1 | PIC16F877A Microcontroller | Processes sensor data and controls system outputs |
-| 2 | DHT11 Temperature Sensor | Measures surrounding temperature |
-| 3 | LCD Display | Displays measured temperature |
-| 4 | LED Indicators | Provides visual alerts |
-| 5 | Buzzer | Generates an audible warning |
-| 6 | Relay Module | Switches the cooling fan |
-| 7 | DC Cooling Fan | Provides active cooling |
-| 8 | Supporting Components | Includes resistors, wiring, and power supply components |
+| Component | Purpose |
+|---|---|
+| PIC16F877A | Processes sensor data and controls system outputs |
+| DHT11 Temperature Sensor | Measures ambient temperature |
+| LCD Display | Displays measured temperature |
+| LED Indicators | Provides visual alerts |
+| Buzzer | Generates audible warnings |
+| Relay Module | Switches the cooling fan |
+| DC Cooling Fan | Provides cooling when required |
+| Supporting Components | Provides power, connections, and circuit support |
 
 ## Software and Development Tools
 
 - **Microcontroller:** PIC16F877A
 - **Programming Language:** Assembly Language
 - **Source Code:** `temperaturepic.asm`
-- **Development Environment:** To be specified according to the actual tool used
-- **Simulation Software:** To be specified according to the actual tool used
+- **Development Environment:** Specify the IDE and assembler actually used.
+- **Simulation Software:** Specify the simulation tool actually used, if applicable.
 
 ## Working Principle
 
-1. **Temperature Acquisition:** The DHT11 sensor measures the surrounding temperature and provides the sensor data to the microcontroller.
-2. **Data Processing:** The PIC16F877A executes the programmed logic to process the temperature information.
+1. **Temperature Sensing:** The DHT11 sensor measures the surrounding temperature.
+2. **Data Processing:** The PIC16F877A executes the programmed control logic.
 3. **Temperature Display:** The measured temperature is displayed on the LCD.
-4. **Threshold Comparison:** The controller compares the measured temperature with the predefined threshold of 35°C.
-5. **Alert Generation:** When the temperature exceeds the threshold, the LED indicator and buzzer provide visual and audible warnings.
-6. **Automatic Cooling:** The relay controls the DC fan according to the programmed temperature-control logic.
-7. **Continuous Monitoring:** The system continues monitoring temperature and updates the outputs based on the implemented control conditions.
-
-## Project Images and Circuit Documentation
-
-This section can include the actual circuit schematic, simulation screenshots, and hardware photographs.
-
-### 1. Circuit Schematic
-
-The circuit schematic illustrates the interfacing of the PIC16F877A microcontroller with the DHT11 sensor, LCD, LED indicators, buzzer, relay, and cooling fan.
-
-Add your schematic PDF to the repository and link it here:
-
-[View Circuit Schematic
-(PDF)](docs/temperature_monitoring_schematic.pdf)
-
-### 2. Proteus Simulation
-
-Add a screenshot of the complete circuit simulation.
-
-![Proteus Circuit Simulation](images/proteus_circuit.png)
-
-### 3. Normal Temperature Condition
-
-Add a screenshot showing the LCD reading and output status under normal temperature conditions.
-
-![Normal Temperature Condition](images/normal_temperature.png)
-
-### 4. High-Temperature Alert and Cooling
-
-Add a screenshot demonstrating the high-temperature response, including the LED, buzzer, and relay-controlled fan.
-
-![High Temperature Alert](images/high_temperature_alert.png)
-
-> **Note:** Replace the example image paths with the actual filenames and folders in your repository. Remove any section for which you do not have a corresponding image or document.
+4. **Threshold Comparison:** The controller compares the temperature with the predefined threshold of 35°C.
+5. **Alert Generation:** When the temperature exceeds the threshold, the LED and buzzer provide visual and audible alerts.
+6. **Cooling Control:** The relay controls the DC fan according to the implemented control logic.
+7. **Continuous Monitoring:** The system continues monitoring temperature and updates its outputs according to the programmed conditions.
 
 ## Learning Outcomes
 
-This project provided practical experience in:
-
-- Programming the PIC16F877A microcontroller using Assembly Language.
-- Interfacing a digital temperature sensor with a microcontroller.
-- Displaying sensor readings on an LCD.
-- Implementing threshold-based decision-making.
-- Controlling digital outputs such as LEDs and buzzers.
-- Implementing relay-based switching for a DC cooling fan.
-- Integrating sensor inputs, display units, and output devices.
-- Understanding embedded control logic and system-level debugging.
+- PIC16F877A programming using Assembly Language.
+- DHT11 temperature sensor interfacing.
+- LCD interfacing and temperature display.
+- Digital input/output control.
+- Threshold-based alert implementation.
+- Relay-based DC fan control.
+- Integration of sensors and output devices.
+- Embedded system debugging and hardware interfacing.
 
 ## Potential Applications
 
-The underlying concept can be adapted for:
+The project concept can be adapted for:
 
-- Electronic equipment temperature monitoring.
-- Small enclosures requiring temperature-dependent cooling.
-- Educational embedded systems demonstrations.
-- Prototype temperature warning systems.
-- Basic automated cooling applications.
-
-These are potential applications of the design concept and are not claims of validated deployment.
+- Temperature monitoring in electronic enclosures.
+- Small-scale automatic cooling systems.
+- Embedded systems laboratory demonstrations.
+- Temperature warning systems.
+- Basic environmental monitoring applications.
 
 ## Repository Structure
 
 ```text
-Smart-Temperature-Monitoring-System/
+PIC16F877A-Temperature-Monitoring-System/
 │
 ├── README.md
 ├── temperaturepic.asm
 │
-├── docs/
-│   └── temperature_monitoring_schematic.pdf
-│
 └── images/
-    ├── proteus_circuit.png
-    ├── normal_temperature.png
-    └── high_temperature_alert.png
+    ├── Temperature monitoring System.jpg
+    ├── Temperature Monitoring System Hardware.jpg
+    └── Output of System.jpg
 ```
 
-The directory structure is illustrative. Include only the files and folders that actually exist in your repository.
+This structure reflects the files shown in the images folder; include other files only if they are present in your repository.
 
 ## Future Enhancements
 
-Potential improvements include:
-
-- Adding adjustable temperature thresholds.
-- Introducing a temperature history and data-logging feature.
-- Incorporating additional sensors for environmental monitoring.
-- Adding fault detection for sensor disconnection.
-- Improving temperature-control hysteresis to reduce frequent relay switching.
+- Adjustable temperature thresholds.
+- Temperature data logging.
+- Sensor disconnection detection.
+- Hysteresis-based fan control to reduce frequent relay switching.
+- Additional sensors for expanded environmental monitoring.
 
 ## Conclusion
 
-The Smart Temperature Monitoring and Automatic Cooling System demonstrates how a microcontroller can combine temperature sensing, visual and audible alerts, and automated cooling in a single embedded application. By using the PIC16F877A and Assembly Language, the project reinforces fundamental concepts of microcontroller architecture, peripheral interfacing, low-level programming, and condition-based control.
+The Smart Temperature Monitoring and Automatic Cooling System demonstrates the use of a PIC16F877A microcontroller to integrate temperature sensing, LCD-based monitoring, alert generation, and relay-controlled cooling. The project strengthens practical understanding of Assembly Language programming, peripheral interfacing, and automated embedded control.
 
-The project provides a foundation for exploring more advanced embedded monitoring and automation systems.
+It also provides a foundation for developing more advanced temperature monitoring and automation applications.
 
 ---
 
 **Project Category:** Embedded Systems  
-**Controller:** PIC16F877A  
+**Microcontroller:** PIC16F877A  
 **Programming Language:** Assembly Language  
-**Sensor:** DHT11  
-**Primary Function:** Temperature Monitoring and Automatic Cooling
+**Temperature Sensor:** DHT11  
+**Temperature Threshold:** 35°C
